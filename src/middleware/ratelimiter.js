@@ -22,11 +22,10 @@ const rateLimiter = async (req, res, next) => {
         message: "Rate limiter unavailable",
       });
     }
-  }
-  else{
+  } else {
     return res.status(400).json({
-      message: "Bad request no clientId given"
-    })
+      message: "Bad request no clientId given",
+    });
   }
 
   next();

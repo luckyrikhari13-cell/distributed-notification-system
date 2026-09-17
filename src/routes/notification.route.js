@@ -7,6 +7,7 @@ const asynchandler = require("../middleware/asynchandler");
 
 const createNotification = async (req, res) => {
   const { type, clientId, recipient, message } = req.body;
+  if(!clientId) throw new Error("missing client id")
   const idempotencyKey = req.get("Idempotency-Key");
   if (!idempotencyKey) {
     return res.status(400).json({
