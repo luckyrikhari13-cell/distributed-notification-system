@@ -16,6 +16,8 @@ const worker = new Worker(
       jobId: job.id,
     });
 
+
+    throw new Error("For testing failure")
     await new Promise((resolve) => setTimeout(resolve, 5000));
 
     logger.info("Job Finished", {

@@ -3,6 +3,7 @@ node_modules/
 .env.*
 !.env.example
 my learnings folder/
+Resume-Project-Overview.md
 npm-debug.log*
 Dockerfile*
 docker-compose.override.yml
